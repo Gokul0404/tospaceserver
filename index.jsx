@@ -60,7 +60,8 @@ app.post("/api/sendEmail", (req, res) => {
     }
   });
 });
-
-app.listen(process.env.port || 8002, () => {
-  console.log("port start");
+//connection 
+const port = process.env.PORT || 8002;
+app.listen(port, () => {
+  console.log(`port start ${port}`);
 });
